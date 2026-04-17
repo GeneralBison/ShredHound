@@ -38,11 +38,11 @@ def main(args):
         idx += 1
 
 def write_json(data, filename):
-    with open(filename, 'w') as outfile:
+    with open(filename, 'w', encoding='utf-8') as outfile:
         json.dump(data, outfile)
 
 def import_json(filename):
-    with open(filename) as f:
+    with open(filename, encoding='utf-8') as f:
         data = json.load(f)
     return data
 
